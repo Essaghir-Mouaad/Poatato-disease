@@ -399,7 +399,7 @@ export default {
   methods: {
     async fetchHistoryData() {
       try {
-        const res = await axios.get("http://localhost:8000/predictions");
+        const res = await axios.get("https://potato-disease-1-ntge.onrender.com/predictions");
 
         if (res.status !== 200) return;
 
@@ -414,7 +414,7 @@ export default {
     async filtred_by_class(class_name) {
       try {
         const res = await axios.get(
-          `http://localhost:8000/predictions/class/${class_name}`
+          `https://potato-disease-1-ntge.onrender.com/predictions/class/${class_name}`
         );
 
         if (res.status !== 200) return;
@@ -441,7 +441,7 @@ export default {
     async deletePrediction(id) {
       try {
         const res = await axios.delete(
-          `http://localhost:8000/predictions/${id}`
+          `https://potato-disease-1-ntge.onrender.com/predictions/${id}`
         );
 
         if (res.status !== 200) return;

@@ -78,7 +78,7 @@ export default {
 
       try {
         const res = await axios.post(
-          "http://localhost:8000/predict",
+          "https://potato-disease-1-ntge.onrender.com/predict",
           formData,
           {
             headers: { "Content-Type": "multipart/form-data" },

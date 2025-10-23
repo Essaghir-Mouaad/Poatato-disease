@@ -12,7 +12,6 @@
       <Predictions v-else-if="currentView === 'predictions'" :recent="recent_5_uploads"/>
       <Analysis v-else-if="currentView === 'analysis'"  :count_data="count_by_class"/>
       <History v-else-if="currentView === 'history'" />
-      <div>Hello</div>
     </div>
   </div>
 </template>
@@ -59,7 +58,7 @@ export default {
    methods: {
     async fetchDashboardData() {
       try {
-        const res = await fetch("http://localhost:8000/Dashboard", {
+        const res = await fetch("https://potato-disease-1-ntge.onrender.com/Dashboard", {
           method: "GET",
         });
 
